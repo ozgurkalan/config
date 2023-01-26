@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/env": true,
+      		"**/.idea": true,
+			"**/__archive__": true,
+			"**/_gsdata_":true,
+			"**/node_modules":true, 
+
+		},
+		"workbench.colorCustomizations":{
+			"statusBar.background": "#c506c5",
+		},
+
+
+	}
+}
