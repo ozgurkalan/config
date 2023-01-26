@@ -87,4 +87,25 @@ alias git_log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cre
 ## directory and file size
 alias du="du -ch"
 
+# docker tty, self VM bash screen
+alias docker_bash="docker run -it --rm --privileged --pid=host alpine nsenter -t 1 -m -u -n -i sh"
 
+# docker info
+d(){
+	clear
+	echo "images------------------------"
+	docker images
+	echo " "
+	echo "volumes------------------------"
+	docker volume ls
+	echo " "
+	echo "network------------------------"
+	docker network ls
+	echo " "
+	echo "containers------------------------"
+	docker ps -a
+}
+
+alias dc="docker-compose"
+alias dcup="dc up -d --build"
+alias dcdown="dc down -v --remove-orphans"
