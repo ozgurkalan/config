@@ -1,3 +1,4 @@
+# bash and vim file edit
 alias brc="vim ~/.bashrc"
 alias bal="vim ~/.bash_aliases"
 alias vrc="vim ~/.vimrc"
