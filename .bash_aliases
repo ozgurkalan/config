@@ -61,7 +61,10 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 
-
+#### git ######
+#
+#git status with last 5 log
+alias gits="git status && echo '.....\n\n' && git_log -5"
 
 # git start-over
 # remove all files and init again with an initial commit
