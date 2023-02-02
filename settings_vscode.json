@@ -13,10 +13,10 @@
     "**/.pytest_cache":true,
     "*.egg-info/":false,
     "**/__archive__": false,
-    "**/.vscode":false,
+    "**/.vscode":false
 },
 "workbench.colorCustomizations":{
-    "statusBar.background": "#3613e3",
+    "statusBar.background": "#3613e3"
 },
 "python.formatting.provider": "black",
 "python.testing.pytestArgs": [
@@ -26,7 +26,6 @@
 "python.testing.nosetestsEnabled": false,
 "python.testing.pytestEnabled": true,
 
-// "python.pythonPath": "/workspaces/xxx/.venv/bin/python",
-"python.linting.enabled": false,
+"python.linting.enabled": false
 
 }
