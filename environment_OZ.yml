@@ -15,6 +15,7 @@ dependencies:
   - ipython
   - ipywidgets
   - jupyter
+  - jupyter_contrib_nbextensions
   - widgetsnbextension
   - markdown2
   - scipy
