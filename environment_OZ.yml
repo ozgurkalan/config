@@ -18,6 +18,7 @@ dependencies:
   - jupyter_contrib_nbextensions
   - widgetsnbextension
   - markdown2
+  - scikit-learn
   - scipy
   - pandas
   - numpy
