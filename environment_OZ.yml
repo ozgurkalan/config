@@ -32,6 +32,7 @@ dependencies:
   - faker
   - dataframe_image
   - pandas-profiling
+  - frictionless 
   - beautifulsoup4
   - requests
   - scrapy
