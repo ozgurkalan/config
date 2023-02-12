@@ -23,6 +23,7 @@ dependencies:
   - scipy
   - pandas
   - numpy
+  - fastparquet
   - pyarrow
   - openpyxl
   - xlsxwriter
