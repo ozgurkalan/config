@@ -33,7 +33,7 @@ dependencies:
   - faker
   - dataframe_image
   - pandas-profiling
-  - pandasdmx 
+  - pandas-datareader
   - beautifulsoup4
   - requests
   - requests_cache
