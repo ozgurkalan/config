@@ -36,6 +36,7 @@ dependencies:
   - pandasdmx 
   - beautifulsoup4
   - requests
+  - requests_cache
   - scrapy
   - tqdm
   - typeguard
