@@ -33,7 +33,7 @@ dependencies:
   - faker
   - dataframe_image
   - pandas-profiling
-  - frictionless 
+  - pandasdmx 
   - beautifulsoup4
   - requests
   - scrapy
