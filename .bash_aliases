@@ -66,6 +66,9 @@ alias chgrp='chgrp --preserve-root'
 #git status with last 5 log
 alias gits="git status && echo '.....\n\n' && git_log -5"
 
+#git fetch all
+alias fec="git fetch --all"
+
 # git start-over
 # remove all files and init again with an initial commit
 git_restart(){
