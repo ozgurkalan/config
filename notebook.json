@@ -1,0 +1,47 @@
+{
+  "load_extensions": {
+    "nbextensions_configurator/config_menu/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "execute_time/ExecuteTime": true,
+    "zenmode/main": true
+  },
+  "keys": {
+    "command": {
+      "bind": {
+        "r,r": "jupyter-notebook:run-all-cells",
+        "shift, ctrl, up": "jupyter-notebook:move-cell-down",
+        "shift,up": "jupyter-notebook:move-cell-down",
+        "shift, up": "jupyter-notebook:move-cell-down",
+        "ctrl-shift-up": "jupyter-notebook:move-cell-up",
+        "ctrl-shift-down": "jupyter-notebook:move-cell-down",
+        "z,z": "jupyter-notebook:undo-cell-deletion",
+        "shift-up": "jupyter-notebook:extend-selection-above",
+        "shift-down": "jupyter-notebook:extend-selection-below",
+        "up": "jupyter-notebook:select-previous-cell",
+        "down": "jupyter-notebook:select-next-cell",
+        "0,r": "jupyter-notebook:confirm-restart-kernel-and-run-all-cells"
+      },
+      "unbind": [
+        "r",
+        "z",
+        "shift-up",
+        "shift-down",
+        "up",
+        "k",
+        "down",
+        "j",
+        "shift-j",
+        "shift-k"
+      ]
+    }
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": false
+    }
+  },
+  "Notebook": {
+    "Toolbar": true,
+    "Header": false
+  }
+}
