@@ -16,6 +16,8 @@ dependencies:
   - ipywidgets
   - jupyter
   - jupyter_contrib_nbextensions
+  - webcolors
+  - jsonschema-with-format-nongpl
   - widgetsnbextension
   - markdown2
   - statsmodels
@@ -42,6 +44,7 @@ dependencies:
   - typeguard
   - typer
   - typing
+  - dynaconf
   - lxml
   - black
   - isort
