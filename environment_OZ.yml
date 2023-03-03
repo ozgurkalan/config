@@ -44,6 +44,7 @@ dependencies:
   - typeguard
   - typer
   - typing
+  - python-dotenv
   - dynaconf
   - lxml
   - black
