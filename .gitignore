@@ -273,6 +273,8 @@ dist
 ###########################################################
 
 !tests/test_folder/*.*
+!init.essentials.ipynb
+
 # re-remove unwanted
 .DS_Store
 tmp/
