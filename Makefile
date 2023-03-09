@@ -27,10 +27,10 @@ brew:
 	fi
 
 vimrc:
-	@sudo cp -i .vimrc ~/.vimrc
+	@cp -i .vimrc ~/.vimrc
 
 bash_aliases:
-	@sudo cp -i .bash_aliases ~/.bash_aliases
+	@cp -i .bash_aliases ~/.bash_aliases
 
 tldr:
 	@if ! type -P tldr; then \
