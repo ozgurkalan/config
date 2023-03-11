@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # bash and vim file edit
 alias brc="vim ~/.bashrc"
 alias bal="vim ~/.bash_aliases"
@@ -16,7 +18,7 @@ w(){
 
 # find and list a package via search term
 pipi () {
-    pip list | grep -i $1
+    pip list | grep -i "$1"
     }
 
 
@@ -60,14 +62,14 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
-
+#######################################
 #### git ######
-#
-#git status with last 5 log
-alias gits="git status && echo '.....\n\n' && git_log -5"
 
 #git fetch all
 alias fec="git fetch --all"
+
+#git status with last 5 log
+alias gits="fec && git status && echo '.....\n\n' && git_log -5"
 
 # git start-over
 # remove all files and init again with an initial commit
@@ -91,12 +93,24 @@ alias git_co="git add . && git commit -m 'WiP'"
 ## git_log: log the git
 alias git_log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
+
+
+################################
+## Shell info
+################################
+
 ## directory and file size
 alias du="du -ch"
 
-# docker tty, self VM bash screen
-alias docker_bash="docker run -it --rm --privileged --pid=host alpine nsenter -t 1 -m -u -n -i sh"
+## get file/dir permissions
+get_permissions() {
+stat -f %Mp%Lp 
+}
 
+################################
+
+################################
+### DOCKER #####################
 # docker info
 d(){
 	clear
@@ -113,6 +127,17 @@ d(){
 	docker ps -a
 }
 
+### Docker Compose ###########################
 alias dc="docker-compose"
 alias dcup="dc up -d --build"
 alias dcdown="dc down -v --remove-orphans"
+##############################################
+
+
+## .bash_local
+if [ -f ~/.bash_local ]; then
+	# shellcheck source=/dev/null
+	. ~/.bash_local
+	# if local conf file is there, than can be used
+	alias blo="vim ~/.bash_local"
+fi
