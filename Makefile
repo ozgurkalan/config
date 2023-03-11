@@ -27,6 +27,15 @@ brew:
 		echo "brew is already installed..."; \
 	fi
 
+<<<<<<< HEAD
+=======
+vimrc:
+	@cp -i .vimrc ~/.vimrc
+
+bash_aliases:
+	@cp -i .bash_aliases ~/.bash_aliases
+
+>>>>>>> origin/HEAD
 tldr:
 	@if ! type -P tldr; then \
 		npm install -g tldr; fi
