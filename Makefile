@@ -1,12 +1,14 @@
-.PHONY: all
+.PHONY: all, bashall, bash_aliases, bash_local
 
 all: help 
+bashall: bash_aliases bash_local
 
 help:
-	@echo "install brew: brew"
-	@echo "copy .vimrc:	vimrc"
-	@echo "install vim-plug: vim-plug"
-	@echo "install tldr: tldr"
+	@echo "install by make: \n \
+	brew, tldr, vim, tmux \n"
+	@echo "bash goodies: \n \
+	bash_aliases, bash_local \n \
+	or just bashall..."
 
 test_confirmation:
 	@read -p "Are you sure? [y/N] " ans && ans=$${ans:-N}; \
@@ -18,7 +20,6 @@ test_confirmation:
 	@echo 'Next steps...'
 
 
-
 brew:
 	@if ! type -P brew; then \
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
@@ -26,20 +27,33 @@ brew:
 		echo "brew is already installed..."; \
 	fi
 
-vimrc:
-	@sudo cp -i .vimrc ~/.vimrc
-
-bash_aliases:
-	@sudo cp -i .bash_aliases ~/.bash_aliases
-
 tldr:
 	@if ! type -P tldr; then \
 		npm install -g tldr; fi
 
-vim-plug:
-	@if [ -f ~/.vim/autoload/plug.vim ]; then \
-		echo "vim plug is already installed"; \
-	else \
-		curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim; fi
+bash_aliases:
+	@cp -i .bash_aliases ~/.bash_aliases
+
+bash_local:
+	@cp -i .bash_local ~/.bash_local
+
+vim:
+	@if [ -d ~/.vim ]; then rm -rf ~/.vim; fi
+	@git clone https://github.com/gpakosz/.vim.git ~/.vim
+	@ln -sf  ~/.vim/.vimrc ~/. 
+
+tmux:
+	@if [ -d ~/.tmux ]; then rm -rf ~/.tmux; fi
+	@git clone https://github.com/gpakosz/.tmux.git ~/.tmux
+	@ln -s -f ~/.tmux/.tmux.conf ~/. 
+	@cp ~/.tmux/.tmux.conf.local ~/.
+	@sed -i.bak '/set -g mouse on/s/#//' ~/.tmux.conf.local
+
+	
+
+
+
+
+
 
 
