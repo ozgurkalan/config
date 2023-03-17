@@ -8,7 +8,7 @@ alias vrc="vim ~/.vimrc"
 if command -v python &> /dev/null; then
 # Python 2 is installed, create alias for python command
     alias py=python 
-else command -v python3 &> /dev/null; then
+else command -v python3 &> /dev/null;
 # Python 3 is installed, create alias for python3 command
     alias py=python3 
 fi
