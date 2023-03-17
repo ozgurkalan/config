@@ -5,7 +5,14 @@ alias brc="vim ~/.bashrc"
 alias bal="vim ~/.bash_aliases"
 alias vrc="vim ~/.vimrc"
 
-alias py=python
+if command -v python &> /dev/null; then
+# Python 2 is installed, create alias for python command
+    alias py=python 
+else command -v python3 &> /dev/null; then
+# Python 3 is installed, create alias for python3 command
+    alias py=python3 
+fi
+
 
 # which python, pip
 w(){
