@@ -33,8 +33,6 @@ dependencies:
   - xlwings
   - matplotlib
   - seaborn
-  - faker
-  - dataframe_image
   - pandas-profiling
   - pandas-datareader
   - pygwalker
