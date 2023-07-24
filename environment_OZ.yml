@@ -15,7 +15,6 @@ dependencies:
   - ipykernel
   - ipython
   - ipywidgets
-  - notebook
   - jupyter
   - jupyter_contrib_nbextensions
   - webcolors
@@ -76,3 +75,4 @@ dependencies:
   - pip:
       - ipyaggrid
       - playwright
+      - notebook
