@@ -2,11 +2,12 @@
 name: OZ
 channels:
   - conda-forge
-  - defaults
   - bioconda
+  - PyPI
+  - defaults
 dependencies:
   - pip
-  - sqlalchemy==1.4.46
+  - sqlalchemy
   - alembic
   - click
   - faker
@@ -14,6 +15,7 @@ dependencies:
   - ipykernel
   - ipython
   - ipywidgets
+  - notebook
   - jupyter
   - jupyter_contrib_nbextensions
   - webcolors
@@ -36,6 +38,8 @@ dependencies:
   - dataframe_image
   - pandas-profiling
   - pandas-datareader
+  - pygwalker
+  - ibis-framework
   - beautifulsoup4
   - requests
   - requests_cache
@@ -60,6 +64,14 @@ dependencies:
   - sphinx-rtd-theme
   - myst-parser
   - recommonmark
+  - ta-lib
+  - pandas-ta
+  - python-binance
+  - redis
+  - celery
+  - dateparser
+  - s3fs
+  - boto3
 
   - pip:
       - ipyaggrid
