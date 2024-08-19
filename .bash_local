@@ -1,3 +1,12 @@
 #!/bin/bash
 ### file for local configuration
 #### do not dirty the confs
+
+alias blow='source ~/.bashrc'
+
+if [ -f /data/.bash_helper ]; then
+    source /data/.bash_helper
+fi
+
+alias home='cd ~'
+alias bat='batcat'
